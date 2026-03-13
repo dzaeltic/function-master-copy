@@ -4,6 +4,13 @@
 
 function objectValues(object) {
 	// CODE HERE
+	//create storage array
+	let storage = [];
+	//loop thru object and add it's values into the storage
+	for (let key in object) {
+		storage.push(object[key]);
+	}
+	return storage;
 }
 
 //////////////////////////////////////////////////////////////////////
@@ -12,6 +19,14 @@ function objectValues(object) {
 
 function keysToString(object){
 	// CODE HERE
+	//init storage string
+	let storage = '';
+	//loop thru object
+	for (let key in object) {
+		storage += key + ' ';
+	}
+	newStore = storage.slice(0, -1);
+	return newStore;
 }
 
 //////////////////////////////////////////////////////////////////////
@@ -20,6 +35,16 @@ function keysToString(object){
 
 function valuesToString(object) {
 	// CODE HERE
+	//create storage string
+	let store = '';
+	//loop through object
+	for (let key in object) {
+		if (typeof object[key] === 'string') {
+			store += object[key] + ' ';
+		}
+	}
+	newStore = store.slice(0, -1);
+	return newStore;
 }
 
 //////////////////////////////////////////////////////////////////////
