@@ -53,6 +53,12 @@ function valuesToString(object) {
 
 function arrayOrObject(collection) {
 	// CODE HERE
+	if (Array.isArray(collection) === true) {
+		return 'array'
+	}
+	if (typeof collection === 'object') {
+		return 'object';
+	}
 }
 
 //////////////////////////////////////////////////////////////////////
@@ -61,6 +67,10 @@ function arrayOrObject(collection) {
 
 function capitalizeWord(string) {
 	// CODE HERE
+	let arr = string.split('');
+	arr.splice(0, 1, arr[0].toUpperCase());
+	let newS = arr.join('');
+	return newS;
 }
 
 //////////////////////////////////////////////////////////////////////
@@ -69,6 +79,15 @@ function capitalizeWord(string) {
 
 function capitalizeAllWords(string) {
 	// CODE HERE
+	let arr = string.split(' ');
+	let store = [];
+	for (let value of arr) {
+		
+		store.push(capitalizeWord(value));
+	}
+
+return store.join(' ');
+
 }
 
 //////////////////////////////////////////////////////////////////////
@@ -77,6 +96,9 @@ function capitalizeAllWords(string) {
 
 function welcomeMessage(object) {
 	// CODE HERE
+	let nme = capitalizeWord(object['name']);
+	return 'Welcome ' + nme + '!';
+
 }
 
 //////////////////////////////////////////////////////////////////////
