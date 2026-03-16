@@ -107,6 +107,9 @@ function welcomeMessage(object) {
 
 function profileInfo(object) {
 	// CODE HERE
+	let nm = capitalizeWord(object['name']);
+	let spc = capitalizeWord(object['species']);
+	return nm + ' is a ' + spc;
 }
 
 //////////////////////////////////////////////////////////////////////
@@ -115,6 +118,8 @@ function profileInfo(object) {
 
 function maybeNoises(object) {
 	// CODE HERE
+	let noise = object['noises'];
+	if 
 }
 
 //////////////////////////////////////////////////////////////////////
