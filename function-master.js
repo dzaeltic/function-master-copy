@@ -149,7 +149,8 @@ return false;
 
 function addFriend(name, object) {
 	// CODE HERE
-	
+	object['friends'].push(name);
+	return object;
 
 }
 
@@ -159,6 +160,14 @@ function addFriend(name, object) {
 
 function isFriend(name, object) {
 	// CODE HERE
+for (let value of object.friends) {
+	if (name === value) {
+		return true;
+	}
+}
+return false;
+
+
 }
 
 //////////////////////////////////////////////////////////////////////
