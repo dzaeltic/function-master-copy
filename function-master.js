@@ -119,7 +119,11 @@ function profileInfo(object) {
 function maybeNoises(object) {
 	// CODE HERE
 	let noise = object['noises'];
-	if 
+	if (noise === undefined || noise.length === 0){
+		return 'there are no noises';
+	} else {
+		return noise.join(' ');
+	}
 }
 
 //////////////////////////////////////////////////////////////////////
@@ -128,6 +132,15 @@ function maybeNoises(object) {
 
 function hasWord(string, word) {
 	// CODE HERE
+	let newStr = string.split(' ');
+	for (let i = 0; i < newStr.length; i++) {
+		if (word === newStr[i]) {
+			return true;
+		}
+	}
+return false;
+
+
 }
 
 //////////////////////////////////////////////////////////////////////
@@ -136,6 +149,8 @@ function hasWord(string, word) {
 
 function addFriend(name, object) {
 	// CODE HERE
+	
+
 }
 
 //////////////////////////////////////////////////////////////////////
